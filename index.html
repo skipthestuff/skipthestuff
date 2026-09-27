@@ -15,6 +15,7 @@
       --text: #334155;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
@@ -50,19 +51,19 @@
     .hero {
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       color: white;
-      padding: 5rem 2rem;
+      padding: 3rem 2rem 2.5rem;
       text-align: center;
     }
     .hero h1 {
       font-size: 2.75rem;
       font-weight: 800;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
       letter-spacing: -0.025em;
     }
     .hero p {
       font-size: 1.25rem;
       max-width: 650px;
-      margin: 0 auto 2rem;
+      margin: 0 auto 1.5rem;
       color: #94a3b8;
     }
     .btn {
@@ -79,23 +80,22 @@
     .container {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 4rem 1.5rem;
+      padding: 1.5rem 1.5rem 3rem;
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+      gap: 1.5rem;
     }
     .card {
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 2rem;
+      padding: 1.75rem;
       box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
     .card h3 { color: var(--dark); margin-bottom: 0.75rem; }
-    .icon { font-size: 2rem; margin-bottom: 1rem; }
+    .icon { font-size: 2rem; margin-bottom: 0.75rem; }
     footer {
       text-align: center;
       padding: 2rem;
@@ -110,8 +110,9 @@
   <header>
     <a href="index.html" class="logo">🌿 Skip<span>theStuff</span></a>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="#action">For Individuals</a>
       <a href="restaurants.html">For Restaurants</a>
+      <a href="#impact">Community Impact</a>
     </nav>
   </header>
 
@@ -130,10 +131,10 @@
       </div>
       <div class="card">
         <div class="icon">🛍️</div>
-        <h3>For Diners</h3>
+        <h3>For Individuals</h3>
         <p>Politely request "no plastics" when ordering takeout. Small everyday actions create massive reductions in local landfill waste.</p>
       </div>
-      <div class="card">
+      <div class="card" id="impact">
         <div class="icon">🌱</div>
         <h3>Community Impact</h3>
         <p>Millions of unopened plastic forks and ketchup packets end up in landfills daily. Together, we can change the default.</p>
