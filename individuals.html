@@ -21,39 +21,47 @@
       <div class="card">
         <div class="icon">📝</div>
         <h3>1. Leave Order Notes</h3>
-        <p>When ordering online or via food delivery apps, type a polite note in the special instructions field: <em>"No plastic utensils, extra napkins, or condiment packets, please!"</em></p>
+        <p>When ordering online or via delivery apps, write in the notes: <em>"No plastic utensils, extra napkins, or sauce packets, please!"</em></p>
       </div>
       <div class="card">
         <div class="icon">🗣️</div>
         <h3>2. Speak Up at Pickup</h3>
-        <p>When ordering in person or over the phone, explicitly state your preference before they pack your order: <em>"I have utensils at home, so please hold the plastics."</em></p>
+        <p>When ordering in person or over the phone, state your preference before packing: <em>"I have utensils at home, so please hold the plastics."</em></p>
       </div>
       <div class="card">
         <div class="icon">📣</div>
         <h3>3. Advocate Locally</h3>
-        <p>Encourage your favorite neighborhood spots to transition to a by-request policy. Highlighting that it saves them money on packaging supplies makes it an easy win for them.</p>
+        <p>Encourage your favorite neighborhood spots to transition to a by-request policy using our sample letter and advocacy tips below.</p>
       </div>
     </div>
 
-    <!-- Expanded Guidance Section -->
-    <div class="form-card" style="margin-top: 2rem;">
-      <h2>How to Talk to Your Favorite Restaurants</h2>
-      <p>Most restaurant managers want to reduce waste—and packaging overhead—but simply stick with what's familiar. A friendly conversation can nudge them toward a by-request policy.</p>
-      
-      <div style="margin-top: 1.5rem;">
-        <h4 style="color: var(--dark); font-weight: 700; margin-bottom: 0.5rem;">💡 Simple Conversation Starter</h4>
-        <p style="background-color: var(--light-bg); padding: 1rem; border-left: 4px solid var(--primary); border-radius: 4px; font-style: italic;">
-          "I love ordering food from here! Have you ever considered making cutlery and sauce packets by-request only? It saves so much plastic waste from going into our landfills, and it cuts down on your supply costs."
-        </p>
+    <!-- Get Involved / Restaurant Letter Section -->
+    <div class="form-card" id="get-involved" style="margin-top: 2.5rem;">
+      <h2>Get Involved: Write to Your Favorite Restaurant</h2>
+      <p style="margin-bottom: 1.5rem;">Most owners want to save money on supply overhead and cut waste, but need a gentle nudge to make cutlery optional. Copy the template below and email or drop it off at your go-to spot!</p>
+
+      <div style="background-color: var(--light-bg); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; position: relative;">
+        <pre id="letter-text" style="white-space: pre-wrap; font-family: inherit; font-size: 0.95rem; line-height: 1.6; color: var(--text);">Subject: A simple cost-saving idea for [Restaurant Name]
+
+Dear [Restaurant Owner/Manager Name],
+
+I am a regular customer and love dining at [Restaurant Name]! I’m writing to ask if you would consider adopting a "by-request" policy for single-use plastic utensils, extra napkins, and condiment packets on takeout orders.
+
+Making disposable items available only when explicitly requested by customers helps reduce unnecessary plastic landfill waste in our community. Better yet, it directly cuts down on your monthly packaging and supply costs.
+
+Our local community initiative, Skip the Stuff (skipthestuff.org), helps independent restaurants make this transition smoothly and lists participating businesses on our directory.
+
+Thank you so much for your delicious food and for considering this small change to support a cleaner community!
+
+Best regards,
+
+[Your Name]
+[Your Neighborhood / Town]</pre>
       </div>
 
-      <div style="margin-top: 1.5rem;">
-        <h4 style="color: var(--dark); font-weight: 700; margin-bottom: 0.5rem;">🎯 Key Points to Mention</h4>
-        <ul style="padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.5rem;">
-          <td><strong>Cost Savings:</strong> Single-use items add up fast in monthly packaging supply costs.</td>
-          <td><strong>Customer Goodwill:</strong> Diners appreciate businesses taking proactive steps to cut waste.</td>
-          <td><strong>Free Community Partner Listing:</strong> Point them to <code>skipthestuff.org</code> so they can take the pledge and get recognized locally.</td>
-        </ul>
+      <div style="margin-top: 1.25rem; display: flex; align-items: center; gap: 1rem;">
+        <button onclick="copyLetter()" class="btn" id="copy-btn">📋 Copy Letter Text</button>
+        <span id="copy-status" style="color: var(--primary-dark); font-weight: 600; font-size: 0.9rem; display: none;">Copied to clipboard!</span>
       </div>
     </div>
   </main>
@@ -61,7 +69,7 @@
   <!-- Dynamic Footer Container -->
   <footer id="site-footer"></footer>
 
-  <!-- Header & Footer Loader Script -->
+  <!-- Header, Footer & Interactive Copy Script -->
   <script>
     fetch('./header.html')
       .then(res => res.text())
@@ -70,6 +78,20 @@
     fetch('./footer.html')
       .then(res => res.text())
       .then(data => document.getElementById('site-footer').innerHTML = data);
+
+    function copyLetter() {
+      const text = document.getElementById('letter-text').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const status = document.getElementById('copy-status');
+        const btn = document.getElementById('copy-btn');
+        status.style.display = 'inline';
+        btn.textContent = '✓ Copied!';
+        setTimeout(() => {
+          status.style.display = 'none';
+          btn.textContent = '📋 Copy Letter Text';
+        }, 3000);
+      });
+    }
   </script>
 
 </body>
