@@ -39,6 +39,14 @@
       gap: 0.5rem;
     }
     .logo span { color: var(--primary); }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 1.5rem;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--primary); }
     .hero {
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       color: white;
@@ -100,13 +108,17 @@
 <body>
 
   <header>
-    <a href="#" class="logo">🌿 Skip<span>theStuff</span></a>
+    <a href="index.html" class="logo">🌿 Skip<span>theStuff</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="restaurants.html">For Restaurants</a>
+    </nav>
   </header>
 
   <section class="hero">
     <h1>Simple Choices. Cleaner Communities.</h1>
     <p>A volunteer-led initiative reducing single-use plastic waste by making takeout accessories optional across local restaurants.</p>
-    <a href="#action" class="btn">Take the Pledge</a>
+    <a href="restaurants.html" class="btn">Take the Pledge</a>
   </section>
 
   <main class="container" id="action">
