@@ -8,14 +8,8 @@
 </head>
 <body>
 
-  <header>
-    <a href="index.html" class="logo">🌿 Skip<span>theStuff</span></a>
-    <nav>
-      <a href="individuals.html">For Individuals</a>
-      <a href="restaurants.html">For Restaurants</a>
-      <a href="index.html#impact">Community Impact</a>
-    </nav>
-  </header>
+  <!-- Dynamic Header Container -->
+  <header id="site-header"></header>
 
   <section class="hero">
     <h1>Take Action as a Diner</h1>
@@ -42,9 +36,19 @@
     </div>
   </main>
 
-  <footer>
-    <p>&copy; Skip the Stuff. Volunteer-led community initiative.</p>
-  </footer>
+  <!-- Dynamic Footer Container -->
+  <footer id="site-footer"></footer>
+
+  <!-- Header & Footer Loader Script -->
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('site-header').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('site-footer').innerHTML = data);
+  </script>
 
 </body>
 </html>
