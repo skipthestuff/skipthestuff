@@ -5,44 +5,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skip the Stuff | Reduce Single-Use Plastic Waste</title>
   <style>
+    :root {
+      --primary: #10b981;
+      --primary-dark: #059669;
+      --dark: #0f172a;
+      --light-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --text: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: system-ui, -apple-system, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-      color: #1a202c;
+      color: var(--text);
+      background-color: var(--light-bg);
     }
     header {
-      border-bottom: 2px solid #e2e8f0;
-      padding-bottom: 1.5rem;
-      margin-bottom: 2rem;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    h1 { color: #2d3748; margin-bottom: 0.5rem; }
-    .tagline { font-size: 1.25rem; color: #4a5568; font-weight: 500; }
-    .card {
-      background: #f7fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 8px;
-      padding: 1.5rem;
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--dark);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .logo span { color: var(--primary); }
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: -0.025em;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 650px;
+      margin: 0 auto 2rem;
+      color: #94a3b8;
+    }
+    .btn {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      font-weight: 600;
+      padding: 0.8rem 1.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn:hover { background-color: var(--primary-dark); }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
       margin-top: 2rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .card h3 { color: var(--dark); margin-bottom: 0.75rem; }
+    .icon { font-size: 2rem; margin-bottom: 1rem; }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      color: #64748b;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Skip the Stuff</h1>
-    <p class="tagline">A volunteer-led initiative reducing single-use plastic waste by making takeout accessories optional.</p>
+    <a href="#" class="logo">🌿 Skip<span>theStuff</span></a>
   </header>
 
-  <main>
-    <h2>Simple Choices, Cleaner Communities</h2>
-    <p>Millions of plastic forks, spoons, napkins, and condiment packets are thrown away unopened every single day. <strong>Skip the Stuff</strong> empowers restaurants and consumers to cut down on unnecessary waste simply by asking first.</p>
-    
-    <div class="card">
-      <h3>Are you a restaurant owner?</h3>
-      <p>Save money on packaging costs while helping your community cut plastic waste. Join our by-request pledge today.</p>
+  <section class="hero">
+    <h1>Simple Choices. Cleaner Communities.</h1>
+    <p>A volunteer-led initiative reducing single-use plastic waste by making takeout accessories optional across local restaurants.</p>
+    <a href="#action" class="btn">Take the Pledge</a>
+  </section>
+
+  <main class="container" id="action">
+    <div class="grid">
+      <div class="card">
+        <div class="icon">🍽️</div>
+        <h3>For Restaurants</h3>
+        <p>Save money on packaging costs and reduce waste. Join our by-request pledge to make cutlery and condiments optional.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🛍️</div>
+        <h3>For Diners</h3>
+        <p>Politely request "no plastics" when ordering takeout. Small everyday actions create massive reductions in local landfill waste.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🌱</div>
+        <h3>Community Impact</h3>
+        <p>Millions of unopened plastic forks and ketchup packets end up in landfills daily. Together, we can change the default.</p>
+      </div>
     </div>
   </main>
+
+  <footer>
+    <p>&copy; Skip the Stuff. Volunteer-led community initiative.</p>
+  </footer>
+
 </body>
 </html>
