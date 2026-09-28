@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You for Pledging | Skip the Stuff</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Dynamic Header Container -->
+  <header id="site-header"></header>
+
+  <main class="container" style="max-width: 600px; text-align: center; padding: 4rem 1rem;">
+    <div style="font-size: 3rem; margin-bottom: 1rem;">🌱</div>
+    <h1>Thank You for Taking the Pledge!</h1>
+    <p style="font-size: 1.1rem; margin-top: 1rem; color: #555;">
+      We’ve received your submission. Thank you for partnering with us to cut single-use waste in our community.
+    </p>
+    <p style="margin-top: 1rem; color: #555;">
+      Our team will review your details and add your restaurant to our community directory shortly.
+    </p>
+    <a href="index.html" class="btn" style="display: inline-block; margin-top: 2rem; text-decoration: none;">Return to Home</a>
+  </main>
+
+  <!-- Dynamic Footer Container -->
+  <footer id="site-footer"></footer>
+
+  <!-- Header & Footer Loader Script -->
+  <script>
+    fetch('./header.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('site-header').innerHTML = data);
+
+    fetch('./footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('site-footer').innerHTML = data);
+  </script>
+
+</body>
+</html>
