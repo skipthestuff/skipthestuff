@@ -17,56 +17,56 @@
       <p>Small choices in daily takeout add up to massive waste reduction and financial savings across our community.</p>
     </section>
 
-<!-- Single Container for all Body Content -->
+    <!-- Single Container for all Body Content -->
     <div class="container">
-    
-    <!-- Key Impact Metrics -->
-    <section class="stats-grid">
-      <div class="stat-card">
-        <h2>40 Billion</h2>
-        <p>Plastic utensils thrown away in the US each year, most used for less than 3 minutes.</p>
-      </div>
-      <div class="stat-card">
-        <h2>$1,000s</h2>
-        <p>Saved annually by participating local restaurants switching to opt-in single-use items.</p>
-      </div>
-      <div class="stat-card">
-        <h2>100%</h2>
-        <p>Grassroots initiative driven by conscious local residents and business owners.</p>
-      </div>
-    </section>
-
-    <!-- Core Impact Detail -->
-    <section class="impact-details">
-      <h2>Why Skipping the Stuff Works</h2>
       
-      <div class="impact-item">
-        <h3>1. Cutting Waste at the Source</h3>
-        <p>Most takeout is eaten at home or work where reusable utensils are already on hand. Unrequested plastic forks and sauce packets go straight from the bag to the landfill.</p>
-      </div>
+      <!-- Key Impact Metrics (Updated classes to match .grid and .card in styles.css) -->
+      <section class="grid" style="margin-top: 2rem;">
+        <div class="card">
+          <h2>40 Billion</h2>
+          <p>Plastic utensils thrown away in the US each year, most used for less than 3 minutes.</p>
+        </div>
+        <div class="card">
+          <h2>$1,000s</h2>
+          <p>Saved annually by participating local restaurants switching to opt-in single-use items.</p>
+        </div>
+        <div class="card">
+          <h2>100%</h2>
+          <p>Grassroots initiative driven by conscious local residents and business owners.</p>
+        </div>
+      </section>
 
-      <div class="impact-item">
-        <h3>2. Direct Savings for Local Businesses</h3>
-        <p>Supply costs continue to climb. Providing disposable accessories only upon request lets restaurants significantly trim non-food inventory expenses.</p>
-      </div>
+      <!-- Core Impact Detail -->
+      <section class="impact-details" style="margin-top: 2.5rem;">
+        <h2>Why Skipping the Stuff Works</h2>
+        
+        <div class="impact-item" style="margin-top: 1rem;">
+          <h3>1. Cutting Waste at the Source</h3>
+          <p>Most takeout is eaten at home or work where reusable utensils are already on hand. Unrequested plastic forks and sauce packets go straight from the bag to the landfill.</p>
+        </div>
 
-      <div class="impact-item">
-        <h3>3. Cleaner Local Parks & Waterways</h3>
-        <p>Fewer single-use items mean less neighborhood litter blowing into local parks, storm drains, and municipal waste streams.</p>
-      </div>
-    </section>
+        <div class="impact-item" style="margin-top: 1rem;">
+          <h3>2. Direct Savings for Local Businesses</h3>
+          <p>Supply costs continue to climb. Providing disposable accessories only upon request lets restaurants significantly trim non-food inventory expenses.</p>
+        </div>
 
-    <!-- Call to Action Footer Box -->
-    <section class="cta-box">
-      <h2>Ready to Make an Impact?</h2>
-      <p>Are you a restaurant owner? Join our growing network of sustainable local businesses today.</p>
-      <a href="restaurants.html" class="btn">Take the Pledge 🌱</a>
-    </section>
+        <div class="impact-item" style="margin-top: 1rem;">
+          <h3>3. Cleaner Local Parks & Waterways</h3>
+          <p>Fewer single-use items mean less neighborhood litter blowing into local parks, storm drains, and municipal waste streams.</p>
+        </div>
+      </section>
+
+      <!-- Call to Action Footer Box (Updated to use .card styling) -->
+      <section class="card" style="margin-top: 2.5rem; text-align: center;">
+        <h2>Ready to Make an Impact?</h2>
+        <p style="margin: 0.5rem 0 1.25rem;">Are you a restaurant owner? Join our growing network of sustainable local businesses today.</p>
+        <a href="restaurants.html" class="btn">Take the Pledge 🌱</a>
+      </section>
 
     </div>
   </main>
 
-<!-- Dynamic Footer Container -->
+  <!-- Dynamic Footer Container -->
   <footer id="site-footer"></footer>
 
   <!-- Header & Footer Loader Script -->
@@ -79,7 +79,6 @@
       .then(res => res.text())
       .then(data => document.getElementById('site-footer').innerHTML = data);
   </script>
-
 
 </body>
 </html>
