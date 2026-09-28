@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Skip the Stuff</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Dynamic Header Container -->
+  <header id="site-header"></header>
+
+  <main>
+    <!-- Full-Width Hero Banner -->
+    <section class="hero">
+      <h1>Thank You! 🌱</h1>
+      <p>We’ve received your message and appreciate you connecting with us.</p>
+    </section>
+
+    <!-- Body Content Wrapper -->
+    <div class="container" style="text-align: center; padding: 3rem 1rem;">
+      <div class="card" style="max-width: 600px; margin: 0 auto; padding: 2.5rem;">
+        <h2>What Happens Next?</h2>
+        <p style="margin: 1rem 0 2rem; color: var(--text); line-height: 1.6;">
+          A member of our team will review your submission and get back to you as soon as possible. In the meantime, feel free to explore more about our mission or share the initiative with local dining spots.
+        </p>
+        
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="index.html" class="btn">Return Home</a>
+          <a href="impact.html" class="btn" style="background-color: transparent; color: var(--primary); border: 2px solid var(--primary);">View Our Impact</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Dynamic Footer Container -->
+  <footer id="site-footer"></footer>
+
+  <!-- Header & Footer Loader Script -->
+  <script>
+    fetch('./header.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('site-header').innerHTML = data);
+
+    fetch('./footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('site-footer').innerHTML = data);
+  </script>
+
+</body>
+</html>
