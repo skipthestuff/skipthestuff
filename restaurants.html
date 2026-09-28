@@ -43,7 +43,7 @@
       <form action="https://api.web3forms.com/submit" method="POST" id="pledge-form" style="display: flex; flex-direction: column; gap: 1rem;">
         <!-- Web3Forms Config -->
         <input type="hidden" name="access_key" value="62c086ce-9a2c-4ab1-a22f-5c4904999a47">
-        <input type="hidden" name="subject" value="🌱 New Restaurant Pledge - Skip the Stuff">
+        <input type="hidden" name="subject" id="email-subject" value="New Restaurant Pledge">
         <input type="hidden" name="from_name" value="Skip the Stuff Website">
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
@@ -84,6 +84,20 @@
     fetch('./footer.html')
       .then(res => res.text())
       .then(data => document.getElementById('site-footer').innerHTML = data);
+  </script>
+
+  <!-- Dynamic Email Subject Handler -->
+  <script>
+    const pledgeForm = document.getElementById('pledge-form');
+    const restaurantInput = document.getElementById('restaurant-name');
+    const subjectInput = document.getElementById('email-subject');
+
+    pledgeForm.addEventListener('submit', function() {
+      const restaurantName = restaurantInput.value.trim();
+      if (restaurantName) {
+        subjectInput.value = `New Restaurant Pledge: ${restaurantName}`;
+      }
+    });
   </script>
 
 </body>
