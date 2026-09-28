@@ -40,7 +40,13 @@
       <h2>Take the Restaurant Pledge</h2>
       <p style="margin-bottom: 1.5rem;">Ready to make takeout accessories optional at your establishment? Fill out the pledge below to get listed in our community directory.</p>
 
-      <form action="#" method="POST" id="pledge-form" style="display: flex; flex-direction: column; gap: 1rem;">
+      <form action="https://api.web3forms.com/submit" method="POST" id="pledge-form" style="display: flex; flex-direction: column; gap: 1rem;">
+        <!-- Web3Forms Config -->
+        <input type="hidden" name="access_key" value="62c086ce-9a2c-4ab1-a22f-5c4904999a47">
+        <input type="hidden" name="subject" value="🌱 New Restaurant Pledge - Skip the Stuff">
+        <input type="hidden" name="from_name" value="Skip the Stuff Website">
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
         <div>
           <label for="restaurant-name" style="display: block; font-weight: 600; margin-bottom: 0.25rem;">Restaurant Name *</label>
           <input type="text" id="restaurant-name" name="restaurant_name" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 4px;">
